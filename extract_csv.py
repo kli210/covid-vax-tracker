@@ -10,6 +10,5 @@ while True:
     print("csv file successfully downloaded!")
     time.sleep(86400)  # Waits for 24 hours before downloading again
 
-# Downloads up-to-date csv file daily   
-#asf
+# Downloads up-to-date csv file daily
 
