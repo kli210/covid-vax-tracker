@@ -2,14 +2,14 @@ import pandas as pd
 import mysql.connector as mysql
 
 # Import CSV
-df = pd.read_csv('C:/Users/kelly/Desktop/Projects/VaxTracker/data_automation/covid_data.csv',index_col=False, delimiter = ',')
+df = pd.read_csv('C:/Users//XXXXX//covid_data.csv',index_col=False, delimiter = ',')
 final = df.fillna("")
 
 # Connect to SQL Server
 try:
     with mysql.connect(
             user='root',
-            password='Molecule0!', 
+            password='', 
             host='localhost', 
             database='vaxtracker'
             ) as cnx:
