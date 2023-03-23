@@ -1,6 +1,9 @@
 # Automate the download of global covid-19 dataset in csv file from the Our World in Data website
 import urllib.request
 import time
+from datetime import datetime
+
+startTime = datetime.now()
 
 url = "https://covid.ourworldindata.org/data/owid-covid-data.csv"
 filename = "covid_data.csv"
@@ -48,6 +51,7 @@ while True:
             cursor.fetchall()
             print("Total number of rows in table: ", cursor.rowcount)
         print("\nMySQL connection is closed.")
+        print("\nTime taken to run script", datetime.now() - startTime)
         time.sleep(86400)  # Waits for 24 hours before downloading csv file and loading it to the db again
                     
     except OSError as e:
